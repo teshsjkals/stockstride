@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockStride - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            background: #f8f9fa;
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 1.1rem;
+            border: none;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: #e9ecef;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .email-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .email-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .app-info {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .app-info h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+
+        .chevron.rotated {
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>StockStride Support</h1>
+            <p>We're here to help you with your packing needs</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How do I create my first packing list?
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To create your first packing list:</p>
+                        <ol>
+                            <li>Tap the "+" button in the top right corner of the main screen</li>
+                            <li>Enter a name for your list (e.g., "Weekend Trip")</li>
+                            <li>Optionally, choose a template to pre-fill your list with common items</li>
+                            <li>Tap 'Save' to create the list</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How do I add items to a list?
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To add items to a list:</p>
+                        <ol>
+                            <li>Tap on a list from the main screen to open its details</li>
+                            <li>Tap the "+" button in the top right corner</li>
+                            <li>Enter the item name and quantity</li>
+                            <li>Tap 'Add Item'</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How do I mark items as packed?
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To mark items as packed:</p>
+                        <ol>
+                            <li>In the list detail view, tap the checkbox next to an item</li>
+                            <li>The item will be marked as packed and crossed out</li>
+                            <li>Tap again to unmark if needed</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How do I search and filter my lists?
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>StockStride offers powerful search and filtering:</p>
+                        <ul>
+                            <li><strong>Search:</strong> Use the search bar to find lists by name or items within lists</li>
+                            <li><strong>Filter:</strong> Tap the filter icon to filter by completion status (All, Completed, In Progress, Not Started)</li>
+                            <li><strong>Sort:</strong> Tap the sort icon to sort by date, name, or progress</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How do I change the app's theme color?
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To change the theme color:</p>
+                        <ol>
+                            <li>Tap the gear icon in the top left of the main screen</li>
+                            <li>In the 'Appearance' section, choose your preferred theme color</li>
+                            <li>The change will be applied immediately throughout the app</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How do I share a packing list?
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To share a packing list:</p>
+                        <ol>
+                            <li>Long-press on a list card from the main screen</li>
+                            <li>Select 'Share' from the context menu</li>
+                            <li>Choose to share as text or PDF</li>
+                            <li>Select your preferred sharing method (Messages, Email, etc.)</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How do I duplicate a list?
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To duplicate a list:</p>
+                        <ol>
+                            <li>Long-press on a list card from the main screen</li>
+                            <li>Select 'Duplicate' from the context menu</li>
+                            <li>A copy of the list will be created with "(copy)" added to the name</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How do I delete a list?
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To delete a list:</p>
+                        <ol>
+                            <li>Long-press on a list card from the main screen</li>
+                            <li>Select 'Delete' from the context menu</li>
+                            <li>Confirm the deletion in the popup dialog</li>
+                            <li>Alternatively, you can edit a list and use the "Delete List" button in the Danger Zone</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Need More Help?</h3>
+                <p>If you can't find the answer to your question above, please don't hesitate to contact us:</p>
+                <a href="mailto:acudov71@gmail.com" class="email-link">acudov71@gmail.com</a>
+                <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">
+                    We typically respond within 24 hours
+                </p>
+            </div>
+
+            <div class="app-info">
+                <h3>About StockStride</h3>
+                <p>StockStride is a modern, elegant packing list app designed to help you never forget important items on your trips. Whether you're planning a business trip, vacation, or weekend getaway, StockStride makes packing organized and stress-free.</p>
+                
+                <h4 style="margin-top: 20px; margin-bottom: 10px;">Key Features:</h4>
+                <ul class="feature-list">
+                    <li>Unlimited smart packing lists</li>
+                    <li>Real-time progress tracking</li>
+                    <li>Powerful search and filtering</li>
+                    <li>Beautiful, customizable themes</li>
+                    <li>Ready-made templates</li>
+                    <li>PDF export for printing</li>
+                    <li>Share lists with others</li>
+                    <li>Detailed analytics and statistics</li>
+                    <li>Achievement system</li>
+                    <li>Completely free to use</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const chevron = button.querySelector('.chevron');
+            
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                chevron.classList.remove('rotated');
+            } else {
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer.active').forEach(item => {
+                    item.classList.remove('active');
+                });
+                document.querySelectorAll('.chevron.rotated').forEach(item => {
+                    item.classList.remove('rotated');
+                });
+                
+                // Open this FAQ
+                answer.classList.add('active');
+                chevron.classList.add('rotated');
+            }
+        }
+    </script>
+</body>
+</html>
